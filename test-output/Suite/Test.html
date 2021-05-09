@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 09 12:40:22 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>219 seconds (219524 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.annotations.demo.Heroku.abTesting_tc1()'><b>abTesting_tc1</b><br>Test class: test.annotations.demo.Heroku</td>
+<td></td>
+<td>0</td>
+<td>test.annotations.demo.Heroku@5c671d7f</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku.addRemoveElements_tc2()'><b>addRemoveElements_tc2</b><br>Test class: test.annotations.demo.Heroku</td>
+<td></td>
+<td>0</td>
+<td>test.annotations.demo.Heroku@5c671d7f</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku.checkBoxes_tc3()'><b>checkBoxes_tc3</b><br>Test class: test.annotations.demo.Heroku</td>
+<td></td>
+<td>0</td>
+<td>test.annotations.demo.Heroku@5c671d7f</td></tr>
+<tr>
+<td title='testngpractice.TestngHeroku.contextMenu_17()'><b>contextMenu_17</b><br>Test class: testngpractice.TestngHeroku</td>
+<td></td>
+<td>0</td>
+<td>testngpractice.TestngHeroku@687e99d8</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku.disappearingElements_tc4()'><b>disappearingElements_tc4</b><br>Test class: test.annotations.demo.Heroku</td>
+<td></td>
+<td>2</td>
+<td>test.annotations.demo.Heroku@5c671d7f</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku.dropdown_tc5()'><b>dropdown_tc5</b><br>Test class: test.annotations.demo.Heroku</td>
+<td></td>
+<td>0</td>
+<td>test.annotations.demo.Heroku@5c671d7f</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku.dynamicContent_tc6()'><b>dynamicContent_tc6</b><br>Test class: test.annotations.demo.Heroku</td>
+<td></td>
+<td>2</td>
+<td>test.annotations.demo.Heroku@5c671d7f</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku1.dynamicControls_tc7()'><b>dynamicControls_tc7</b><br>Test class: test.annotations.demo.Heroku1</td>
+<td></td>
+<td>4</td>
+<td>test.annotations.demo.Heroku1@757277dc</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku1.dynamicLoading_tc8()'><b>dynamicLoading_tc8</b><br>Test class: test.annotations.demo.Heroku1</td>
+<td></td>
+<td>2</td>
+<td>test.annotations.demo.Heroku1@757277dc</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku1.entryAd_tc9()'><b>entryAd_tc9</b><br>Test class: test.annotations.demo.Heroku1</td>
+<td></td>
+<td>1</td>
+<td>test.annotations.demo.Heroku1@757277dc</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku1.forgotPassword_tc10()'><b>forgotPassword_tc10</b><br>Test class: test.annotations.demo.Heroku1</td>
+<td></td>
+<td>1</td>
+<td>test.annotations.demo.Heroku1@757277dc</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku1.formAuthentication_tc11()'><b>formAuthentication_tc11</b><br>Test class: test.annotations.demo.Heroku1</td>
+<td></td>
+<td>2</td>
+<td>test.annotations.demo.Heroku1@757277dc</td></tr>
+<tr>
+<td title='testngpractice.TestngHeroku.hovers_tc18()'><b>hovers_tc18</b><br>Test class: testngpractice.TestngHeroku</td>
+<td></td>
+<td>1</td>
+<td>testngpractice.TestngHeroku@687e99d8</td></tr>
+<tr>
+<td title='test.annotations.demo.Heroku1.inputs_tc12()'><b>inputs_tc12</b><br>Test class: test.annotations.demo.Heroku1</td>
+<td></td>
+<td>0</td>
+<td>test.annotations.demo.Heroku1@757277dc</td></tr>
+<tr>
+<td title='testngpractice.TestngHeroku.keyPresses_tc13()'><b>keyPresses_tc13</b><br>Test class: testngpractice.TestngHeroku</td>
+<td></td>
+<td>0</td>
+<td>testngpractice.TestngHeroku@687e99d8</td></tr>
+<tr>
+<td title='testngpractice.TestngHeroku.multiplewindows_tc14()'><b>multiplewindows_tc14</b><br>Test class: testngpractice.TestngHeroku</td>
+<td></td>
+<td>0</td>
+<td>testngpractice.TestngHeroku@687e99d8</td></tr>
+<tr>
+<td title='testngpractice.TestngHeroku.notificationMessages_tc15()'><b>notificationMessages_tc15</b><br>Test class: testngpractice.TestngHeroku</td>
+<td></td>
+<td>2</td>
+<td>testngpractice.TestngHeroku@687e99d8</td></tr>
+<tr>
+<td title='testngpractice.TestngHeroku.redirectLink_tc16()'><b>redirectLink_tc16</b><br>Test class: testngpractice.TestngHeroku</td>
+<td></td>
+<td>1</td>
+<td>testngpractice.TestngHeroku@687e99d8</td></tr>
+</table><p>
+</body>
+</html>

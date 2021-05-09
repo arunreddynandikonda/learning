@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Facebook">
+	<listeners>
+		<listener class-name="pom.TestListener" />
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="pom.FacebookTests">
+				<methods>
+					<include name="invalidLogInTest" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
