@@ -15,8 +15,9 @@ public class Heroku1 {
 
 		Heroku1 h = new Heroku1();
 //		h.ABTesting_tc1();
-//		h.AddRemoveElements_tc2();
+		h.AddRemoveElements_tc2();
 //		h.BasicAuth_tc3();
+//		h.digestAuthentication_tc22();
 //		h.Checkboxes_tc4();
 //		h.DisappearingElements_tc5();
 //		h.Dropdown_tc6();
@@ -33,7 +34,7 @@ public class Heroku1 {
 //		h.NotificationMessages_tc17();
 //		h.RedirectLink_tc18();
 //		h.contextMenu_19();
-		h.dragandDrop_tc20();
+//		h.dragandDrop_tc20();
 //		h.hovers_tc21();
 	}
 
@@ -66,11 +67,18 @@ public class Heroku1 {
 
 	}
 
-	public void BasicAuth_tc3() throws InterruptedException {
+	public void BasicAuth_tc3() {
 		WebDriver driver = CreateBrowser();
-		driver.findElement(By.xpath("//a[text()='Basic Auth']")).click();
-		Thread.sleep(3000); 
-//		quit(driver);
+		driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+		System.out.println(driver.findElement(By.xpath("//p")).getText());
+		quit(driver);
+	}
+
+	public void digestAuthentication_tc22() {
+		WebDriver driver = CreateBrowser();
+		driver.get("https://admin:admin@the-internet.herokuapp.com/digest_auth");
+		System.out.println(driver.findElement(By.xpath("//p")).getText());
+		quit(driver);
 	}
 
 	public void Checkboxes_tc4() {
@@ -242,10 +250,9 @@ public class Heroku1 {
 		Actions actions = new Actions(driver);
 		Thread.sleep(5000);
 		WebElement source = driver.findElement(By.xpath("//div[@id='column-a']"));
-		WebElement target = driver.findElement(By.xpath("//div[@id='column-b']")); 
-		actions.dragAndDrop(source, target).build().perform();
-//		actions.clickAndHold(source).moveToElement(target).release(source).build().perform();
-//		quit(driver);
+		WebElement target = driver.findElement(By.xpath("//div[@id='column-b']"));
+		actions.clickAndHold(source).moveToElement(target).release(source).build().perform();
+//		quit(driver); 
 	}
 
 	public void hovers_tc21() throws InterruptedException {

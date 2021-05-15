@@ -10,24 +10,24 @@ public class Heroku {
 				"C:\\Users\\saith\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
 
 		Heroku heroku = new Heroku();
-		heroku.abTesting_tc1();
-		heroku.AddRemoveElements_tc2();
+//		heroku.abTesting_tc1();
+//		heroku.AddRemoveElements_tc2();
 		heroku.BasicAuth_tc3();
-		heroku.Checkboxes_tc4();
-		heroku.DisappearingElements_tc5();
-		heroku.Dropdown_tc6();
-		heroku.DynamicControls_tc7();
-		heroku.DynamicLoading_tc8();
-		heroku.EntryAd_tc9();
-		heroku.ForgotPassword_tc10();
-		heroku.FormAuthentication_tc11();
-		heroku.Frames_tc12();
-		heroku.Inputs_tv13();
-		heroku.JQueryUiMenus_tv14();
-		heroku.KeyPresses_tv15();
-		heroku.Multiplewindows_tv16();
-		heroku.NotificationMessages_tv17();
-		heroku.RedirectLink_tv18();
+//		heroku.Checkboxes_tc4();
+//		heroku.DisappearingElements_tc5();
+//		heroku.Dropdown_tc6();
+//		heroku.DynamicControls_tc7();
+//		heroku.DynamicLoading_tc8();
+//		heroku.EntryAd_tc9();
+//		heroku.ForgotPassword_tc10();
+//		heroku.FormAuthentication_tc11();
+//		heroku.Frames_tc12();
+//		heroku.Inputs_tv13();
+//		heroku.JQueryUiMenus_tv14();
+//		heroku.KeyPresses_tv15();
+//		heroku.Multiplewindows_tv16();
+//		heroku.NotificationMessages_tv17();
+//		heroku.RedirectLink_tv18();
 	}
 
 	public WebDriver createBrowser() {
@@ -57,9 +57,7 @@ public class Heroku {
 
 	public void BasicAuth_tc3() {
 		ChromeDriver driver = new ChromeDriver();
-		driver.navigate().to("https://the-internet.herokuapp.com/");
-		driver.findElement(By.xpath("//*[@id=\"content\"]/ul/li[3]/a")).click();
-		driver.quit();
+		driver.get("https://admin:admin@the-internet.herokuapp.com/");
 	}
 
 	public void Checkboxes_tc4() {

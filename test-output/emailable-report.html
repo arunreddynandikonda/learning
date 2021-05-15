@@ -9,15 +9,39 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Facebook</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">13,121</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">3</td><td class="num">70,063</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Facebook</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">pom.FlipkartTests</td><td><a href="#m0">flipkartValidInputTest</a></td><td rowspan="1">1620318756485</td><td rowspan="1">6888</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Facebook</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">pom.FacebookTests</td><td><a href="#m0">invalidCreateNewAccount</a></td><td rowspan="1">1620982926372</td><td rowspan="1">26711</td></tr><tr class="failedeven"><td><a href="#m1">invalidLogInTest</a></td><td rowspan="1">1620982961968</td><td rowspan="1">14291</td></tr><tr class="failedodd"><td rowspan="1">pom.FlipkartTests</td><td><a href="#m2">flipkartValidInputTest</a></td><td rowspan="1">1620982912137</td><td rowspan="1">2662</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">pom.FacebookTests</td><td><a href="#m3">invalidForgotPasswordTest</a></td><td rowspan="1">1620982956559</td><td rowspan="1">2329</td></tr><tr class="passedodd"><td rowspan="1">pom.HerokuTests</td><td><a href="#m4">addRemoveElementsTest</a></td><td rowspan="1">1620982922228</td><td rowspan="1">883</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">pom.FlipkartTests#flipkartValidInputTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for &quot;mobiles&quot;] but found [Showing 1 – 24 of 729 results for &quot;mobiles&quot;]
-	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:63)
-Caused by: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for &quot;mobiles&quot;] but found [Showing 1 – 24 of 729 results for &quot;mobiles&quot;]
-	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:53)
+<h2>Test</h2><h3 id="m0">pom.FacebookTests#invalidCreateNewAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [An error occurred. Please try again.] but found [Please choose a more secure password. It should be longer than 6 characters, unique to you and difficult for others to guess.]
+	at pom.FacebookTests.invalidCreateNewAccount(FacebookTests.java:87)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">pom.FacebookTests#invalidLogInTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.AssertionError: expected [The email address or mobile number you entered isn&apos;t connected to an account. Find your account and log in.] but found [The password that you&apos;ve entered is incorrect. Forgotten password?]
+	at pom.FacebookTests.invalidLogInTest(FacebookTests.java:51)
+Caused by: java.lang.AssertionError: expected [The email address or mobile number you entered isn&apos;t connected to an account. Find your account and log in.] but found [The password that you&apos;ve entered is incorrect. Forgotten password?]
+	at pom.FacebookTests.invalidLogInTest(FacebookTests.java:44)
 	... 25 more
 ... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">pom.FlipkartTests#flipkartValidInputTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;_4921Z t0pPfW&quot; title=&quot;6 GB &amp;amp; Above&quot;&gt;...&lt;/div&gt; is not clickable at point (143, 515). Other element would receive the click: &lt;div class=&quot;_213eRC _2ssEMF&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=90.0.4430.93)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-7KPE3BUK&apos;, ip: &apos;192.168.174.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\saith\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 311428a5105165f19491e3b9176b064c
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at pom.WebPage.select(WebPage.java:79)
+	at pom.FlipkartProductsPage.enterTheRamSize(FlipkartProductsPage.java:54)
+	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:39)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">pom.FacebookTests#invalidForgotPasswordTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">pom.HerokuTests#addRemoveElementsTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

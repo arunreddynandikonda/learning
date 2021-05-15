@@ -1,25 +1,39 @@
 package heroku;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 //import java.util.ArrayList;
 //import java.util.List;
+import java.util.stream.Collectors;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Practice {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\saith\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
 
@@ -33,7 +47,13 @@ public class Practice {
 //		p.linksCountAssignment();
 //		p.dynamicAssignment("bmw");
 //		p.tablesAssignment();
-		p.autoCompleteDropdownAssignment();
+//		p.autoCompleteDropdownAssignment();
+//		p.screenshot();
+//		p.brokenLinks();
+//		p.comparing();
+//		p.VeggiePrice();
+		p.validatingFilterbox("Tomato");
+
 	}
 
 	public WebDriver CreateBrowser() {
@@ -273,6 +293,121 @@ public class Practice {
 		selectCountries.sendKeys("aus");
 
 //		List<WebElement> countrySuggeestions = driver.findElements(By.xpath("//ul[@id='ui-id-1']/li"));
+	}
+
+	public void handlingHttpsCertifications() {
+
+		DesiredCapabilities dc = DesiredCapabilities.chrome();
+
+		dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+		dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+
+		ChromeOptions c = new ChromeOptions();
+		c.merge(dc);
+
+		WebDriver driver = new ChromeDriver(c);
+
+	}
+
+	public void screenshot() throws IOException {
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.cleartrip.com");
+
+		File sc = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		Date date = new Date();
+		String targetLocation = "C:\\Users\\saith\\arun\\arun-training\\TestReport\\screenshots" + date.getTime()
+				+ ".jpg";
+		File des = new File(targetLocation);
+		FileUtils.copyFile(sc, des);
+		driver.quit();
+	}
+
+	public void brokenLinks() throws MalformedURLException, IOException {
+
+		WebDriver driver = CreateBrowser();
+		driver.manage().window().maximize();
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
+
+		List<WebElement> links = driver.findElements(By.xpath("//tr//a"));
+		for (WebElement link : links) {
+			String url = link.getAttribute("href");
+			HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+			conn.setRequestMethod("HEAD");
+			conn.connect();
+			int code = conn.getResponseCode();
+			if (code > 400) {
+				System.out.println("the broken link is " + link.getText() + " and the response code is " + code);
+			}
+		}
+		driver.quit();
+	}
+
+	public void comparing() {
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+
+		WebElement assendingbutton = driver.findElement(By.xpath("(//th[@scope='col'])[1]"));
+		assendingbutton.click();
+
+		WebElement nextbutton = driver.findElement(By.xpath("//a[@aria-label='Next']"));
+		nextbutton.click();
+
+		List<WebElement> veggies = driver.findElements(By.xpath("//tr/td[1]"));
+
+		List<Object> originalList = veggies.stream().map(s -> s.getText()).collect(Collectors.toList());
+
+		List<Object> sortedList = originalList.stream().sorted().collect(Collectors.toList());
+
+		Assert.assertTrue(originalList.equals(sortedList));
+
+	}
+
+	public void VeggiePrice() {
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+
+		WebElement assendingbutton = driver.findElement(By.xpath("(//th[@scope='col'])[1]"));
+		assendingbutton.click();
+
+		List<Object> veggiePrices;
+		do {
+			List<WebElement> veggies = driver.findElements(By.xpath("//tr/td[1]"));
+
+			veggiePrices = veggies.stream().filter(s -> s.getText().contains("Strawberry")).map(s -> getVeggiePrice(s))
+					.collect(Collectors.toList());
+
+			veggiePrices.forEach(a -> System.out.println(a));
+			if (veggiePrices.size() < 1) {
+				WebElement nextbutton = driver.findElement(By.xpath("//a[@aria-label='Next']"));
+				nextbutton.click();
+			}
+		} while (veggiePrices.size() < 1);
+	}
+
+	private static String getVeggiePrice(WebElement s) {
+		String veggiePrice = s.findElement(By.xpath("following-sibling::td[1]")).getText();
+		return veggiePrice;
+	}
+
+	public void validatingFilterbox(String veggieName) {
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+
+		WebElement searchbox = driver.findElement(By.xpath("//input[@type='search']"));
+		searchbox.sendKeys(veggieName);
+
+		WebElement veggie = driver.findElement(By.xpath("//tr/td[1]"));
+
+		Assert.assertTrue(veggieName.equals(veggie.getText()));
+
 	}
 
 }

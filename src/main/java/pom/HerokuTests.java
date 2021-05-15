@@ -1,6 +1,7 @@
 package pom;
 
 import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -48,7 +49,7 @@ public class HerokuTests {
 		ExtentTestManager.getTest().log(Status.INFO, "Clicking On Delete Button Completed");
 
 		try {
-			Assert.assertTrue(ar.isDeleteButtonPresent());
+			Assert.assertFalse(ar.isDeleteButtonPresent());
 			ExtentTestManager.getTest().log(Status.PASS, "Delete Button Is Present", MediaEntityBuilder
 					.createScreenCaptureFromPath(sc.takeScreenshot(driver, "addRemoveElementsTest")).build());
 		} catch (Throwable t) {

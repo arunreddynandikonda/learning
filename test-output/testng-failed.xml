@@ -13,6 +13,14 @@
           <include name="quit"/>
         </methods>
       </class> <!-- pom.FlipkartTests -->
+      <class name="pom.FacebookTests">
+        <methods>
+          <include name="invalidCreateNewAccount"/>
+          <include name="quit"/>
+          <include name="invalidLogInTest"/>
+          <include name="before"/>
+        </methods>
+      </class> <!-- pom.FacebookTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Facebook] -->

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Heroku">
-	<test name="test a">
+<listeners>
+		<listener class-name="pom.TestListener" />
+	</listeners>
+	<test thread-count="5" name="Test">
 		<classes>
-			<class name="pom.HerokuTests2">
-				<methods>
-					<include name="framesTest" />
-				</methods>
-			</class>
+			<class name="pom.HerokuTests" />
 		</classes>
-	</test>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

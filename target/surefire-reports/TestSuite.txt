@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.47 s <<< FAILURE! - in TestSuite
+pom.FlipkartTests.flipkartValidInputTest  Time elapsed: 6.077 s  <<< FAILURE!
+java.lang.RuntimeException: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for "mobiles"] but found [Showing 1 – 24 of 704 results for "mobiles"]
+	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:63)
+Caused by: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for "mobiles"] but found [Showing 1 – 24 of 704 results for "mobiles"]
+	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:53)
+

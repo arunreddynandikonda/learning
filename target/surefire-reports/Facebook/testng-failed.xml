@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Facebook]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="pom.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="pom.FlipkartTests">
+        <methods>
+          <include name="before"/>
+          <include name="flipkartValidInputTest"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- pom.FlipkartTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Facebook] -->
