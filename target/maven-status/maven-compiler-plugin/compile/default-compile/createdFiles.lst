@@ -1,10 +1,16 @@
 pom\HerokuMutipleWindows.class
+javaPrograms\CollectionsUtils.class
+powerofanumber\PowerofanumberTest.class
 test\annotations\demo\ClassB.class
 udemey\Udemey.class
+facebook\Facebook1.class
 heroku\Heroku1.class
 pom\ScreenshotUtils.class
+facebook\Facebook.class
+javaPrograms\JavaPrograms.class
 Asserstions\Makemytrip.class
 flipkart\Flipkart.class
+pom\Xls_Reader.class
 amazon\Testing.class
 test\annotations\demo\ClassC.class
 pom\FlipkartHomePage.class
@@ -15,6 +21,7 @@ testngpractice\TestngHeroku.class
 pom\HerokuAddRemoveElements.class
 amazon\Amazon.class
 globalvariables\GlobalValues.class
+pom\Xlarun.class
 conversionprograms\ListExapmles.class
 flipkart\Orderusingwait.class
 pom\FacebookTests.class
@@ -22,7 +29,9 @@ pom\HerokuHomePage.class
 pom\ExtentTestManager.class
 test\annotations\demo\Heroku.class
 Asserstions\Goibibo.class
+javaPrograms\DateUtils.class
 pom\FlipkartProductsPage.class
+powerofanumber\Powerofnumber.class
 pom\HerokuCheckboxes.class
 pom\WebPage.class
 test\annotations\demo\Listeners.class
@@ -31,6 +40,7 @@ Asserstions\AirAsia.class
 testngpractice\TestNgFlipkart.class
 test\annotations\demo\ClassA.class
 pom\Find.class
+javaPrograms\Sorting.class
 pom\HerokuFrames.class
 heroku\Heroku.class
 pom\FaceBookLoginPage.class
@@ -47,5 +57,6 @@ pom\HerokuHovers.class
 pom\FaceBookForgottenPasswordPage.class
 testng\TestNgTutorial.class
 pom\HerokuContextMenu.class
+pom\TestData.class
 flipkart\Order.class
 heroku\Dropdowns.class

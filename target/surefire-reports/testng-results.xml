@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-11T06:50:15Z" name="Facebook" finished-at="2021-05-11T06:50:26Z" duration-ms="11960">
+  <suite started-at="2021-05-17T16:20:17Z" name="Facebook" finished-at="2021-05-17T16:20:27Z" duration-ms="10194">
     <groups>
     </groups>
-    <test started-at="2021-05-11T06:50:15Z" name="Test" finished-at="2021-05-11T06:50:26Z" duration-ms="11960">
-      <class name="pom.FlipkartTests">
-        <test-method is-config="true" signature="before(org.testng.ITestContext)[pri:0, instance:pom.FlipkartTests@37ceb1df]" started-at="2021-05-11T06:50:15Z" name="before" finished-at="2021-05-11T06:50:19Z" duration-ms="4841" status="PASS">
+    <test started-at="2021-05-17T16:20:17Z" name="Test" finished-at="2021-05-17T16:20:27Z" duration-ms="10194">
+      <class name="pom.FacebookTests">
+        <test-method is-config="true" signature="before(org.testng.ITestContext)[pri:0, instance:pom.FacebookTests@45b4c3a9]" started-at="2021-05-17T16:20:17Z" name="before" finished-at="2021-05-17T16:20:24Z" duration-ms="7196" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2d5f7182]]>
+                <![CDATA[org.testng.TestRunner@7e2c64]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="flipkartValidInputTest()[pri:0, instance:pom.FlipkartTests@37ceb1df]" started-at="2021-05-11T06:50:19Z" name="flipkartValidInputTest" finished-at="2021-05-11T06:50:25Z" duration-ms="5894" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for "mobiles"] but found [Showing 1 – 24 of 704 results for "mobiles"]]]>
-            </message>
+        <test-method signature="invalidLogInTest()[pri:0, instance:pom.FacebookTests@45b4c3a9]" started-at="2021-05-17T16:20:24Z" name="invalidLogInTest" finished-at="2021-05-17T16:20:26Z" duration-ms="1900" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for "mobiles"] but found [Showing 1 – 24 of 704 results for "mobiles"]
-at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:63)
+              <![CDATA[java.lang.NullPointerException
+at pom.Xlarun.getCellData(Xlarun.java:22)
+at pom.FacebookTests.invalidLogInTest(FacebookTests.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -55,26 +53,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
-Caused by: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for "mobiles"] but found [Showing 1 – 24 of 704 results for "mobiles"]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:53)
-... 29 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flipkartValidInputTest -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:pom.FlipkartTests@37ceb1df]" started-at="2021-05-11T06:50:26Z" name="quit" finished-at="2021-05-11T06:50:26Z" duration-ms="744" status="PASS">
+        </test-method> <!-- invalidLogInTest -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:pom.FacebookTests@45b4c3a9]" started-at="2021-05-17T16:20:26Z" name="quit" finished-at="2021-05-17T16:20:27Z" duration-ms="758" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- pom.FlipkartTests -->
+      </class> <!-- pom.FacebookTests -->
     </test> <!-- Test -->
   </suite> <!-- Facebook -->
 </testng-results>

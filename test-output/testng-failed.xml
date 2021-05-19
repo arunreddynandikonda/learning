@@ -6,16 +6,8 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="pom.FlipkartTests">
-        <methods>
-          <include name="before"/>
-          <include name="flipkartValidInputTest"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- pom.FlipkartTests -->
       <class name="pom.FacebookTests">
         <methods>
-          <include name="invalidCreateNewAccount"/>
           <include name="quit"/>
           <include name="invalidLogInTest"/>
           <include name="before"/>

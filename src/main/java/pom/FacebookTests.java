@@ -28,10 +28,10 @@ public class FacebookTests {
 
 		ScreenshotUtils sc = new ScreenshotUtils();
 
-		Xls_Reader reader = new Xls_Reader(
-				"C:\\Users\\saith\\arun\\arun-training\\src\\main\\java\\pom\\SampleExcel.xlsx");
-		String username = reader.getCellData("login", "username", 2);
-		String password = reader.getCellData("login", "password", 2);
+		Xlarun arun = new Xlarun("C:\\Users\\saith\\arun\\arun-training\\src\\main\\java\\pom\\SampleExcel.xlsx");
+		String username = arun.getCellData("login", "username", 5);
+		String password = arun.getCellData("login", "password", 5);
+
 		FaceBookLoginPage loginPage = new FaceBookLoginPage(driver);
 		loginPage.enterUsernameAndPassword(username, password);
 		ExtentTestManager.getTest().log(Status.INFO, "Entering username and password is Completed");

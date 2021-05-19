@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Facebook" class="navigator-link ">
-                    <span>C:\Users\saith\arun\arun-training\pomFlipkart.xml</span>
+                    <span>C:\Users\saith\arun\arun-training\pomFacebook.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Facebook">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Facebook" title="pom.FlipkartTests" class="method navigator-link" hash-for-method="flipkartValidInputTest">flipkartValidInputTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Facebook" title="pom.FacebookTests" class="method navigator-link" hash-for-method="invalidLogInTest">invalidLogInTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Facebook -->
@@ -120,20 +120,18 @@
           <div class="suite-Facebook-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">pom.FlipkartTests</span>
+              <span class="class-name">pom.FacebookTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="flipkartValidInputTest">
-                  </a> <!-- flipkartValidInputTest -->
-                  <span class="method-name">flipkartValidInputTest</span>
-                  <div class="stack-trace">java.lang.RuntimeException: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for &quot;mobiles&quot;] but found [Showing 1 – 24 of 704 results for &quot;mobiles&quot;]
-	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:63)
-Caused by: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results for &quot;mobiles&quot;] but found [Showing 1 – 24 of 704 results for &quot;mobiles&quot;]
-	at pom.FlipkartTests.flipkartValidInputTest(FlipkartTests.java:53)
-	... 29 more
-... Removed 35 stack frames
+                  <a name="invalidLogInTest">
+                  </a> <!-- invalidLogInTest -->
+                  <span class="method-name">invalidLogInTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at pom.Xlarun.getCellData(Xlarun.java:22)
+	at pom.FacebookTests.invalidLogInTest(FacebookTests.java:32)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -142,7 +140,7 @@ Caused by: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results f
         </div> <!-- panel Facebook -->
         <div panel-name="test-xml-Facebook" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\saith\arun\arun-training\pomFlipkart.xml</span>
+            <span class="header-content">C:\Users\saith\arun\arun-training\pomFacebook.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -154,7 +152,11 @@ Caused by: java.lang.AssertionError: expected [Showing 1 – 24 of 689 results f
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;pom.FlipkartTests&quot;/&gt;
+      &lt;class name=&quot;pom.FacebookTests&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;invalidLogInTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- pom.FacebookTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Facebook --&gt;
@@ -196,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'flipkartValidInputTest')
-data.setCell(0, 2, 'pom.FlipkartTests')
-data.setCell(0, 3, 5894);
+data.setCell(0, 1, 'invalidLogInTest')
+data.setCell(0, 2, 'pom.FacebookTests')
+data.setCell(0, 3, 1900);
 window.suiteTableData['Facebook']= { tableData: data, tableDiv: 'times-div-Facebook'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Facebook">
               </div> <!-- times-div-Facebook -->
             </div> <!-- times-div -->
@@ -218,9 +220,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Facebook" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">pom.FacebookTests</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">invalidCreateNewAccount</span>
+                <br/>
+                <span class="ignored-method-name">invalidForgotPasswordTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Facebook" class="panel">
@@ -229,20 +240,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">pom.FlipkartTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">pom.FacebookTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">before(org.testng.TestRunner@2d5f7182)</span>
+                <span class="method-name">before(org.testng.TestRunner@7e2c64)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">flipkartValidInputTest</span>
-                <span class="method-start">4841 ms</span>
+                <span class="method-name">invalidLogInTest</span>
+                <span class="method-start">7196 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">11186 ms</span>
+                <span class="method-start">9405 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
