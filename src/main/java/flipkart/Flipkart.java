@@ -84,8 +84,8 @@ public class Flipkart {
 
 	public void Login_tc1() {
 		WebDriver driver = CreateDriver();
-		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("9494436012");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Arunreddy@186");
+		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("3455645665");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("cscscdscdscsc");
 		driver.findElement(By.xpath("//div[@class='_1D1L_j']/button")).click();
 		quit(driver);
 
@@ -93,7 +93,7 @@ public class Flipkart {
 
 	public void Login_tc2() throws InterruptedException {
 		WebDriver driver = CreateDriver();
-		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("9494436012");
+		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("343434332");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("dffdffec");
 		driver.findElement(By.xpath("//div[@class='_1D1L_j']/button")).click();
 		Thread.sleep(3000);
@@ -105,7 +105,7 @@ public class Flipkart {
 	public void Login_tc3() throws InterruptedException {
 		WebDriver driver = CreateDriver();
 		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("24343432");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Arunreddy@186");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("ccddscdscdsvd");
 		driver.findElement(By.xpath("//div[@class='_1D1L_j']/button")).click();
 		Thread.sleep(3000);
 		System.out.println(driver.findElement(By.xpath("//span[@class='_2YULOR']/span")).getText());
@@ -124,8 +124,8 @@ public class Flipkart {
 
 	public void MyProfile() throws InterruptedException {
 		WebDriver driver = CreateDriver();
-		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("9494436012");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Arunreddy@186");
+		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("1232324343");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("asdfghjk");
 		driver.findElement(By.xpath("//div[@class='_1D1L_j']/button")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@class='_28p97w']/div/div/div")).click();
