@@ -88,7 +88,7 @@ public class TestNgFlipkart {
 	@Test
 	public void Login_tc1() {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("9494436012");
+		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("12344555656");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("dffdffec");
 		driver.findElement(By.xpath("//div[@class='_1D1L_j']/button")).click();
 		System.out.println(
@@ -100,7 +100,7 @@ public class TestNgFlipkart {
 	public void Login_tc2() {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
 		driver.findElement(By.xpath("//form[@autocomplete='on']/div/input")).sendKeys("24343432");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Arunreddy@186");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("asdfgh");
 		driver.findElement(By.xpath("//div[@class='_1D1L_j']/button")).click();
 		System.out.println(
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='_2YULOR']/span")))
